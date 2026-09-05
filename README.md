@@ -14,7 +14,7 @@ kuromi-timer/
 │   └── renderer.js         ← timer logic, sprite animation, settings
 └── assets/
     ├── icons/              ← app icon (see assets/icons/README.md)
-    └── sprites/            ← your LibreSprite mascot frames (see assets/sprites/README.md)
+    └── sprites/            ← libreSprite mascot frames (assets/sprites/README.md)
 ```
 
 ## 1. Install Node.js
