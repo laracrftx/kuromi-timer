@@ -46,19 +46,8 @@ npm start
 
 A small dark window with a pink ring should open. That's your timer.
 
-## 4. Add your pixel art
 
-- Drop your mascot sprite sheets into `assets/sprites/` — exact filenames
-  and format are in `assets/sprites/README.md`. The app hot-checks for
-  these on launch; nothing to configure, just add the files and restart
-  (`npm start` again).
-- Drop your app icon into `assets/icons/` — details in
-  `assets/icons/README.md`.
-- Optional: add a short sound file at `assets/chime.mp3` and it'll play
-  when a session ends (or leave it out — the app just stays quiet if it's
-  missing, it won't crash).
-
-## 5. How the timer works
+## 4. How the timer works
 
 - Default: 25 min focus → 5 min short break, repeating, with a 15 min long
   break every 4th focus session. All of this is editable from the
@@ -67,7 +56,7 @@ A small dark window with a pink ring should open. That's your timer.
   quitting, so the timer can keep running in the background. Right-click
   the tray icon to bring it back or quit for real.
 
-## 6. Building an installable app (.exe / .dmg / .AppImage)
+## 5. Building an installable app (.exe / .dmg / .AppImage)
 
 Once you're happy with it:
 
