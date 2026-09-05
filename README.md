@@ -69,12 +69,3 @@ folder — a `.exe` on Windows, `.dmg` on macOS, `.AppImage`/`.deb` on Linux
 (it builds for whichever OS you run this command on). You'll need the
 `.ico` / `.icns` icon files mentioned above for Windows/macOS builds to
 look right.
-
-## Customizing further
-
-- Colors live at the top of `src/style.css` as CSS variables (`--pink`,
-  `--lavender`, etc.) if you want to adjust the palette to match your art.
-- Timer defaults live in `DEFAULT_SETTINGS` at the top of
-  `src/renderer.js`.
-- Notification text (what pops up when a session ends) is in the
-  `messages` object inside `src/main.js`.
