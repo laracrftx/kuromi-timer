@@ -1,5 +1,4 @@
-# Kuromi Timer 🖤💜
-
+Kuromi Timer 🖤
 A Kuromi-themed Pomodoro timer, built as a desktop app with Electron.
 
 ## What's here
