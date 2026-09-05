@@ -49,7 +49,7 @@ A small dark window with a pink ring should open. That's your timer.
 
 ## 4. How the timer works
 
-- Default: 25 min focus → 5 min short break, repeating, with a 15 min long
+- Default: 30 min focus → 5 min short break, repeating, with a 15 min long
   break every 4th focus session. All of this is editable from the
   **Settings** button in the app itself — nothing to edit in code.
 - Closing the window (the × button) hides it to the system tray rather than
