@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Kuromi Timer</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Custom titlebar (frameless window) -->
+  <div class="titlebar" id="titlebar">
+    <span class="titlebar-title">✧ Kuromi Timer ✧</span>
+    <div class="titlebar-buttons">
+      <button id="btn-minimize" class="tb-btn" aria-label="Minimize">–</button>
+      <button id="btn-close" class="tb-btn tb-btn-close" aria-label="Close to tray">×</button>
+    </div>
+  </div>
+
+  <div class="checker-border top"></div>
+
+  <main class="app">
+
+    <!-- Mascot stage: drop your LibreSprite frames into assets/sprites/ -->
+    <section class="stage" id="stage">
+      <div class="stage-glow"></div>
+      <canvas id="mascot-canvas" width="128" height="128"></canvas>
+      <!-- CSS fallback mascot, shown until real sprites are found -->
+      <div id="mascot-fallback" class="mascot-fallback" aria-hidden="true">
+        <div class="k-ear k-ear-left"></div>
+        <div class="k-ear k-ear-right"></div>
+        <div class="k-hood">
+          <div class="k-face">
+            <div class="k-eye k-eye-left"></div>
+            <div class="k-eye k-eye-right"></div>
+            <div class="k-mouth"></div>
+            <div class="k-blush k-blush-left"></div>
+            <div class="k-blush k-blush-right"></div>
+          </div>
+          <div class="k-skull"></div>
+        </div>
+      </div>
+    </section>
+
+    <p class="phase-label" id="phase-label">Ready when you are</p>
+
+    <!-- Timer ring -->
+    <section class="ring-wrap">
+      <svg viewBox="0 0 200 200" class="ring-svg">
+        <circle class="ring-track" cx="100" cy="100" r="88" />
+        <circle class="ring-progress" id="ring-progress" cx="100" cy="100" r="88" />
+      </svg>
+      <div class="ring-center">
+        <span class="time-display" id="time-display">25:00</span>
+        <span class="session-count" id="session-count">Session 1</span>
+      </div>
+    </section>
+
+    <!-- Session dots -->
+    <div class="dots" id="dots"></div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button class="ctrl-btn ctrl-secondary" id="btn-reset" title="Reset">⟲</button>
+      <button class="ctrl-btn ctrl-primary" id="btn-toggle" title="Start / Pause">▶</button>
+      <button class="ctrl-btn ctrl-secondary" id="btn-skip" title="Skip">⏭</button>
+    </div>
+
+    <button class="settings-toggle" id="btn-settings">Settings</button>
+  </main>
+
+  <!-- Settings panel -->
+  <div class="settings-overlay" id="settings-overlay">
+    <div class="settings-panel">
+      <h2>Settings ✂︎</h2>
+
+      <label class="field">
+        Focus length (minutes)
+        <input type="number" id="input-focus" min="1" max="180" value="25" />
+      </label>
+
+      <label class="field">
+        Short break (minutes)
+        <input type="number" id="input-short-break" min="1" max="60" value="5" />
+      </label>
+
+      <label class="field">
+        Long break (minutes)
+        <input type="number" id="input-long-break" min="1" max="90" value="15" />
+      </label>
+
+      <label class="field">
+        Sessions before long break
+        <input type="number" id="input-sessions" min="1" max="12" value="4" />
+      </label>
+
+      <label class="field field-checkbox">
+        <input type="checkbox" id="input-sound" checked />
+        Play sound when a session ends
+      </label>
+
+      <div class="settings-actions">
+        <button id="btn-settings-cancel" class="ctrl-btn ctrl-secondary">Cancel</button>
+        <button id="btn-settings-save" class="ctrl-btn ctrl-primary settings-save">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="checker-border bottom"></div>
+
+  <audio id="chime" src="../assets/chime.mp3" preload="auto"></audio>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
